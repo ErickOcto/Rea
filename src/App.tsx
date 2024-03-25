@@ -1,6 +1,9 @@
+import './globals.css';
+
+
 const App = () => {
   return (
-    <div>App</div>
+    <div className='text-3xl font-bold'>Caou</div>
   )
 }
 
