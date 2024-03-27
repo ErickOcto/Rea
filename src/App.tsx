@@ -5,7 +5,7 @@ import { Home } from './_root/pages';
 import RootLayout from './_root/RootLayout';
 import './globals.css';
 import { Routes, Route } from 'react-router-dom';
-
+import { Toaster } from "@/components/ui/toaster";
 
 const App = () => {
   return (
@@ -13,8 +13,8 @@ const App = () => {
       <Routes>
         {/* public routes */}
         <Route element={<AuthLayout />}>
-          <Route path="/sign-in" element={<SignInForm />} />
-          <Route path="/sign-up" element={<SignUpForm />} />
+          <Route path="/sign-in" element={<SignInForm/>} />
+          <Route path="/sign-up" element={<SignUpForm/>} />
         </Route>
 
         {/* private routes */}
@@ -23,6 +23,8 @@ const App = () => {
         </Route>
 
       </Routes>
+
+      <Toaster />
     </main>
   );
 }
